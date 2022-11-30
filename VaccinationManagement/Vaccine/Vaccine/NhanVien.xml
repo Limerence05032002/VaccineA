@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ds>
+  <NhanVien>
+    <MaNhanVien>nv1</MaNhanVien>
+    <TenNhanVien>TRun</TenNhanVien>
+    <TenDangNhap>turng</TenDangNhap>
+    <MatKhau>123654</MatKhau>
+    <DiaChi>sdf</DiaChi>
+    <SDT>32156468</SDT>
+  </NhanVien>
+  <NhanVien>
+    <MaNhanVien>nv3</MaNhanVien>
+    <TenNhanVien>TRung Anh 3</TenNhanVien>
+    <TenDangNhap>turng ANhalksd</TenDangNhap>
+    <MatKhau>123654</MatKhau>
+    <DiaChi>sdf</DiaChi>
+    <SDT>32156468</SDT>
+  </NhanVien>
+  <NhanVien>
+    <MaNhanVien>nv7</MaNhanVien>
+    <TenNhanVien>TRung Anh 3</TenNhanVien>
+    <TenDangNhap>turng ANhalksd</TenDangNhap>
+    <MatKhau>123654</MatKhau>
+    <DiaChi>sdf</DiaChi>
+    <SDT>32156468</SDT>
+  </NhanVien>
+  <NhanVien>
+    <MaNhanVien>nv5</MaNhanVien>
+    <TenNhanVien>nv5</TenNhanVien>
+    <TenDangNhap>nv56</TenDangNhap>
+    <MatKhau>nv4</MatKhau>
+    <DiaChi>nv5</DiaChi>
+    <SDT>nv5</SDT>
+  </NhanVien>
+  <NhanVien>
+    <MaNhanVien>5435</MaNhanVien>
+    <TenNhanVien>535</TenNhanVien>
+    <TenDangNhap>tret</TenDangNhap>
+    <MatKhau>te</MatKhau>
+    <DiaChi>tẻt</DiaChi>
+    <SDT>tẻ</SDT>
+  </NhanVien>
+</ds>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vaccines>
+  <vaccine>
+    <TenDM>gdfgdf</TenDM>
+    <MaVC>vc43</MaVC>
+    <TenVC>gfdg</TenVC>
+    <NgaySX>gdfg</NgaySX>
+    <NgayHetHan>dfgs</NgayHetHan>
+    <SoLuong>70</SoLuong>
+    <GiaTien>500</GiaTien>
+    
+  </vaccine>
+  <vaccine>
+    <TenDM>gdfgdf</TenDM>
+    <MaVC>vc435</MaVC>
+    <TenVC>gfdg</TenVC>
+    <NgaySX>gdfg</NgaySX>
+    <NgayHetHan>dfgs</NgayHetHan>
+    <SoLuong>90</SoLuong>
+    <GiaTien>500</GiaTien>
+  </vaccine>
+  <vaccine>
+    <TenDM>gdfgdf</TenDM>
+    <MaVC>vc4</MaVC>
+    <TenVC>gdgd4545</TenVC>
+    <NgaySX>Wednesday, November 30, 2022</NgaySX>
+    <NgayHetHan>Wednesday, November 30, 2022</NgayHetHan>
+    <SoLuong>7454</SoLuong>
+    <GiaTien>500</GiaTien>
+  </vaccine>
+</Vaccines>

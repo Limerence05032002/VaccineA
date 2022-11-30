@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DanhMucSanPhams>
+  <DanhMucSanPham>
+    <maDM>DM01</maDM>
+    <tenDM>Vaccine Covid 19</tenDM>
+  </DanhMucSanPham>
+  <DanhMucSanPham>
+    <maDM>DM01</maDM>
+    <tenDM>Vaccine Sởi</tenDM>
+  </DanhMucSanPham>
+  <DanhMucSanPham>
+    <maDM>DM01</maDM>
+    <tenDM>Vaccine Uốn ván</tenDM>
+  </DanhMucSanPham>
+  <DanhMucSanPham>
+    <maDM>dm03</maDM>
+    <tenDM>Vaccine Uốn ván 2</tenDM>
+  </DanhMucSanPham>
+  <DanhMucSanPham>
+    <maDM>dm014</maDM>
+    <tenDM>Vaccine Sởi2</tenDM>
+  </DanhMucSanPham>
+</DanhMucSanPhams>
