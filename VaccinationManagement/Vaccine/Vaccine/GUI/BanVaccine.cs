@@ -133,7 +133,7 @@ namespace Vaccine.GUI
         {
 
             List<XmlNode> nodeList = new List<XmlNode>();
-            XmlDocument XDoc = XmlFile.getXmlDocument("../../ChiTietHoaDons.xml");
+            XmlDocument XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\ChiTietHoaDons.xml");
             for (int i = 0; i < dgvGioHang.Rows.Count - 1; i++)
             {
 
@@ -160,8 +160,9 @@ namespace Vaccine.GUI
                 nodeList.Add(node);
             }
             Console.WriteLine(nodeList);
+
             HoaDon hoaDon = new HoaDon();
-            hoaDon.add(XDoc, nodeList);
+            hoaDon.add(XDoc, nodeList,"X");
 
             loadTable();
          

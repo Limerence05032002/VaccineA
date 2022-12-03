@@ -54,4 +54,22 @@
     <SoLuong>45</SoLuong>
     <GiaTien>45</GiaTien>
   </vaccine>
+  <vaccine>
+    <TenDM>Vaccine Sởi2</TenDM>
+    <MaVC>VC02</MaVC>
+    <TenVC>vaccine nolo</TenVC>
+    <NgaySX>Wednesday, November 30, 2022</NgaySX>
+    <NgayHetHan>Saturday, December 3, 2022</NgayHetHan>
+    <SoLuong>32</SoLuong>
+    <GiaTien>32</GiaTien>
+  </vaccine>
+  <vaccine>
+    <TenDM>Vaccine Uốn ván 2</TenDM>
+    <MaVC>vc100</MaVC>
+    <TenVC>trung anh</TenVC>
+    <NgaySX>Wednesday, November 30, 2022</NgaySX>
+    <NgayHetHan>Saturday, December 3, 2022</NgayHetHan>
+    <SoLuong>3</SoLuong>
+    <GiaTien>650</GiaTien>
+  </vaccine>
 </Vaccines>

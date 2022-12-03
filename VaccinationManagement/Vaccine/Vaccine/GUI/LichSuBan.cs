@@ -27,11 +27,11 @@ namespace Vaccine.GUI
         {
             dgvLichSu.Rows.Clear();
             MessageBox.Show("1");
-            XDoc = XmlFile.getXmlDocument("../../HoaDonNhapXuats.xml");
+            XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\HoaDonNhapXuats.xml");
             XmlNodeList nodeListDH = XDoc.SelectNodes("/HoaDonNhapXuats/HoaDonNhapXuat");
-            XDoc = XmlFile.getXmlDocument("../../NhanVien.xml");
+            XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\NhanVien.xml");
             XmlNodeList nodeListNV = XDoc.SelectNodes("/ds/NhanVien");
-            XDoc = XmlFile.getXmlDocument("../../ChiTietHoaDons.xml");
+            XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\ChiTietHoaDons.xml");
             XmlNodeList nodeListCTHD = XDoc.SelectNodes("/ChiTietHoaDons/ChiTietHoaDon");
             foreach (XmlNode x in nodeListDH)
             {
@@ -39,9 +39,17 @@ namespace Vaccine.GUI
                 
                     tongtien = 0;
                     soluong = 0;
+                    foreach (XmlNode c in nodeListCTHD)
+                    {
+                        if ((c.ChildNodes[0].InnerText).Equals(x.ChildNodes[0].InnerText))
+                        {
+                            tongtien += int.Parse(c.ChildNodes[3].InnerText);
+                            soluong += int.Parse(c.ChildNodes[2].InnerText);
+                        }
+                    }
                     Console.WriteLine(x.ChildNodes[0].InnerText);
 
-                    dgvLichSu.Rows.Add(x.ChildNodes[0].InnerText,tongtien,soluong);
+                    dgvLichSu.Rows.Add(x.ChildNodes[0].InnerText, soluong, tongtien);
                 
             }
         }

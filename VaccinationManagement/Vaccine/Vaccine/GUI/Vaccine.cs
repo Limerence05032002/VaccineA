@@ -34,6 +34,11 @@ namespace Vaccine.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            stt = 0;
+            HoaDon hd = new HoaDon();
+
+            hd.ThemHoaDon(grvVaccine, "N");
+
             if (txtMaVaccine.Text.Trim() != "")
             {
                 //gán dữ liệu vào DTO
@@ -51,6 +56,7 @@ namespace Vaccine.GUI
                 //hiện lên dgv
                 vaccineBLL.HienThi(grvVaccine);
             }
+            MessageBox.Show("Thêm Sản Phẩm Thành Công", "Thông Báo");
         }
 
         private void btnSua_Click(object sender, EventArgs e)

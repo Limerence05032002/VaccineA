@@ -24,18 +24,39 @@ namespace Vaccine.BLL
             return maHD;
         }
 
-        public Boolean add(XmlDocument XDocCTHD, List<XmlNode> nodeList)
+        public Boolean add(XmlDocument XDocCTHD, List<XmlNode> nodeList, String l)
         {
             try
             {
-                XmlDocument XDocChiTietVaccine = XmlFile.getXmlDocument(@"../../tb_Vaccine.xml");
-                XmlDocument XDoc = XmlFile.getXmlDocument(@"../../HoaDonNhapXuats.xml");
+                XmlDocument XDocChiTietVaccine = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\tb_Vaccine.xml");
+                XmlDocument XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\HoaDonNhapXuats.xml");
                 String maHD_new = taoMaHoaDon(XDoc);
+                String loai = l;
+                int CongTru = 1;
+                if (l.Equals("N"))
+                {
+                    CongTru = 1;
+                }
+                else
+                {
+                    CongTru = -1;
+                }
 
-                XmlFile.themHoaDon(XDoc, maHD_new);
+                XmlFile.themHoaDon(XDoc, maHD_new, loai);
+                foreach (XmlNode x in nodeList)
+                {
+                    XmlNodeList temp = XDocChiTietVaccine.SelectNodes("/Vaccines/vaccine[MaVC = '" + x.ChildNodes[1].InnerText + "']");
+                    cTNS.setSoluong(int.Parse(x.ChildNodes[6].InnerText) * CongTru, temp[0]);
+
+                    XmlNode maHoaDon = XDocCTHD.CreateElement("maHD");
+                    maHoaDon.InnerText = maHD_new;
+                    x.InsertBefore(maHoaDon, x.FirstChild);
+                    XDocCTHD.DocumentElement.AppendChild(x);
+                }
                 
-                XDocCTHD.Save("ChiTietHoaDons.xml"); //ChiTietHoaDon.xml == LichSuBan.xml
-                XDocChiTietVaccine.Save("tb_Vaccine.xml");
+                XDocCTHD.Save(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\ChiTietHoaDons.xml"); //ChiTietHoaDon.xml == LichSuBan.xml
+                MessageBox.Show("Đã lưu");
+                XDocChiTietVaccine.Save(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\tb_Vaccine.xml");
             }
             catch (Exception e)
             {
@@ -45,16 +66,17 @@ namespace Vaccine.BLL
             return true;
         }
 
-        public void ThemHoaDon(DataGridView dgvVaccineBan, String maKHachDD )
+        public void ThemHoaDon(DataGridView dgvVaccineBan, String loai)
         {
             List<XmlNode> nodeList = new List<XmlNode>();
-            XmlDocument XDoc = XmlFile.getXmlDocument(@"../../ChiTietHoaDons.xml");
+            XmlDocument XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\ChiTietHoaDons.xml");
             for (int i = 0; i < dgvVaccineBan.Rows.Count - 1; i++)
             {
 
                 XmlElement node = XDoc.CreateElement("ChiTietHoaDon");
 
                 XmlElement maSP = XDoc.CreateElement("MaVC");
+                Console.WriteLine(maSP.InnerText);
 
                 Console.WriteLine(dgvVaccineBan.Rows[i].Cells[6].Value.ToString() + "MaVC");
 
@@ -72,7 +94,7 @@ namespace Vaccine.BLL
                 nodeList.Add(node);
             }
             HoaDon hoaDon = new HoaDon();
-            hoaDon.add(XDoc, nodeList);
+            hoaDon.add(XDoc, nodeList, loai);
         }
     }
 }
