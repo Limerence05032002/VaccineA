@@ -19,6 +19,7 @@ namespace Vaccine.GUI
         XMLFile XmlFile = new XMLFile();
         XmlNodeList nodeListDM;
         XmlNodeList nodeListCTNS;
+        int stt = 0;
 
         private VaccineBLL vaccineBLL = new VaccineBLL();
         private VaccineDTO vaccineDTO = new VaccineDTO();
@@ -172,6 +173,16 @@ namespace Vaccine.GUI
         {
             FormDanhMuc formDanhMuc = new FormDanhMuc();
             formDanhMuc.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            stt = 0;
+            HoaDon hd = new HoaDon();
+
+
+            MessageBox.Show("Thêm Sản Phẩm Thành Công", "Thông Báo");
+            grvVaccine.Rows.Clear();
         }
         //Char.IsDigit(e.KeyChar) –> kiểm tra xem phím vừa nhập vào textbox có phải là ký tự số hay không, hàm này trả về kiểu bool
         //Char.IsContro(e.KeyChar) –> kiểm tra xem phím vừa nhập vào textbox có phải là các ký tự điều khiển (các phím mũi tên,Delete,Insert,backspace,space bar) hay không, 

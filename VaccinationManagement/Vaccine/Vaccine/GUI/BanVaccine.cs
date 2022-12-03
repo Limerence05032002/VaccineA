@@ -8,14 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Vaccine.BLL;
+using Vaccine.DTO;
 
 namespace Vaccine.GUI
 {
     public partial class BanVaccine : Form
     {
+        private HoaDonBLL hoaDonBLL = new HoaDonBLL();
+        private HoaDonDTO hoaDonDTO = new HoaDonDTO();
+
+        private XmlDocument doc = new XmlDocument();
+
         XMLFile XmlFile = new XMLFile();
         XmlDocument XDoc;
         XmlDocument XDocVaccine;
+        private XmlElement root;
         int stt = 0;
         public BanVaccine()
         {
@@ -42,9 +50,8 @@ namespace Vaccine.GUI
                         dgvVaccineBan.CurrentRow.Cells[3].FormattedValue.ToString(),
                         dgvVaccineBan.CurrentRow.Cells[4].FormattedValue.ToString(),
                         soLuongBan,
-                        
-                        dgvVaccineBan.CurrentRow.Cells[5].FormattedValue.ToString(),
-                        (soLuongBan * int.Parse(dgvVaccineBan.CurrentRow.Cells[5].FormattedValue.ToString()))
+                        dgvVaccineBan.CurrentRow.Cells[6].FormattedValue.ToString(),
+                        (soLuongBan * int.Parse(dgvVaccineBan.CurrentRow.Cells[6].FormattedValue.ToString()))
 
                         );
                 }
@@ -67,6 +74,46 @@ namespace Vaccine.GUI
             }
         }
 
+        void capNhatSoLuong()
+        {
+            
+            int SoluongCon = 0;
+            int SoluongMua = 0;
+            for (int i = 0; i < dgvVaccineBan.Rows.Count - 1; i++ )
+            {
+                SoluongCon += int.Parse(dgvVaccineBan.Rows[i].Cells[5].Value.ToString());
+            }
+            for (int i = 0; i < dgvGioHang.Rows.Count - 1; i++)
+            {
+                SoluongMua += int.Parse(dgvVaccineBan.Rows[i].Cells[5].Value.ToString());
+            }
+
+            SoluongCon = SoluongCon - SoluongMua;
+            ////////////////
+            dgvVaccineBan.Rows.Clear();
+            dgvVaccineBan.ColumnCount = 7;
+
+            XmlDocument XDoc = XmlFile.getXmlDocument("../../tb_Vaccine.xml");
+            XmlNodeList ds = root.SelectNodes("/Vaccines/vaccine");
+            int sd = 0;//lưu chỉ số dòng
+            foreach (XmlNode item in ds)
+            {
+                dgvVaccineBan.Rows.Add();
+                dgvVaccineBan.Rows[sd].Cells[0].Value = item.SelectSingleNode("TenDM").InnerText;
+                dgvVaccineBan.Rows[sd].Cells[1].Value = item.SelectSingleNode("MaVC").InnerText;
+                dgvVaccineBan.Rows[sd].Cells[2].Value = item.SelectSingleNode("TenVC").InnerText;
+                dgvVaccineBan.Rows[sd].Cells[3].Value = item.SelectSingleNode("NgaySX").InnerText;
+                dgvVaccineBan.Rows[sd].Cells[4].Value = item.SelectSingleNode("NgayHetHan").InnerText;
+                dgvVaccineBan.Rows[sd].Cells[5].Value = SoluongCon.ToString();
+                dgvVaccineBan.Rows[sd].Cells[6].Value = item.SelectSingleNode("GiaTien").InnerText;
+                
+                sd++;
+            }
+            ////// //////
+            
+            
+        }
+
         void capNhatTongTien()
         {
             int tongTien = 0;
@@ -84,54 +131,44 @@ namespace Vaccine.GUI
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            //List<XmlNode> nodeList = new List<XmlNode>();
-            //XmlDocument XDoc = XmlFile.getXmlDocument("../../ChiTietHoaDons.xml");
-            //for (int i = 0; i < dgvGioHang.Rows.Count - 1; i++)
-            //{
 
-            //    XmlElement node = XDoc.CreateElement("ChiTietHoaDon");
+            List<XmlNode> nodeList = new List<XmlNode>();
+            XmlDocument XDoc = XmlFile.getXmlDocument("../../ChiTietHoaDons.xml");
+            for (int i = 0; i < dgvGioHang.Rows.Count - 1; i++)
+            {
 
-            //    XmlElement maVaccine = XDoc.CreateElement("MaVaccine");
-            //    Console.WriteLine(i);
+                XmlElement node = XDoc.CreateElement("ChiTietHoaDon");
 
-
-            //    maVaccine.InnerText = dgvGioHang.Rows[i].Cells[1].Value.ToString();
+                XmlElement maSP = XDoc.CreateElement("maSP");
+                Console.WriteLine(i);
 
 
-            //    XmlElement soLuong = XDoc.CreateElement("SoLuong");
+                maSP.InnerText = dgvGioHang.Rows[i].Cells[1].Value.ToString();
+                Console.WriteLine(maSP.InnerText);
 
-            //    soLuong.InnerText = dgvGioHang.Rows[i].Cells[3].Value.ToString();
-            //    XmlElement donGia = XDoc.CreateElement("DonGia");
-            //    donGia.InnerText = dgvGioHang.Rows[i].Cells[4].Value.ToString(); ;
+                XmlElement soLuong = XDoc.CreateElement("soLuong");
+                soLuong.InnerText = dgvGioHang.Rows[i].Cells[3].Value.ToString();
+                Console.WriteLine(soLuong.InnerText);
 
-            //    node.AppendChild(maVaccine);
-            //    node.AppendChild(soLuong);
-            //    node.AppendChild(donGia);
-            //    nodeList.Add(node);
-            //}
+                XmlElement donGia = XDoc.CreateElement("DonGia");
+                donGia.InnerText = dgvGioHang.Rows[i].Cells[6].Value.ToString(); ;
+                Console.WriteLine(donGia.InnerText);
 
+                node.AppendChild(maSP);
+                node.AppendChild(soLuong);
+                node.AppendChild(donGia);
+                nodeList.Add(node);
+            }
+            Console.WriteLine(nodeList);
+            HoaDon hoaDon = new HoaDon();
+            hoaDon.add(XDoc, nodeList);
 
-            //HoaDon hoaDon = new HoaDon();
+            loadTable();
+         
 
-
-            ////String maKH = textBoxMaKhachHang.Text;
-            ////Console.WriteLine(maKH + "123");
-            ////if (maKH.Equals(""))
-            ////    maKH = "KH00000";
-
-            //XmlNodeList n = XDocVaccine.SelectNodes("/KhachHangs/KhachHang[maKH = '" + maKH + "']");
-            //n[0].ChildNodes[2].InnerText = (int.Parse(n[0].ChildNodes[2].InnerText) + int.Parse(labelTongTien.Text)).ToString();
-            //XDocVaccine.Save("KhachHangs.xml");
-
-
-
-            //hoaDon.add(XDoc, nodeList, maKH, "X");
-
-
-
-            //loadTable();
-            //MessageBox.Show("Đã Thanh Toán Thành Công");
-        }
+            MessageBox.Show("Đã Thanh Toán Thành Công");
+            }
+        
 
         private void dgvVaccineBan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

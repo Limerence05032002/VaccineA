@@ -47,8 +47,11 @@
   <ItemGroup>
     <Compile Include="BLL\DANHMUC_BLL.cs" />
     <Compile Include="BLL\fileXML.cs" />
+    <Compile Include="BLL\HoaDon.cs" />
+    <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\NHANVIEN_BLL.cs" />
     <Compile Include="BLL\VaccineBLL.cs" />
+    <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="GUI\BanVaccine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +79,12 @@
     </Compile>
     <Compile Include="GUI\FormNhanVien.Designer.cs">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LichSuBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LichSuBan.Designer.cs">
+      <DependentUpon>LichSuBan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Vaccine.cs">
       <SubType>Form</SubType>
@@ -116,6 +125,9 @@
     <EmbeddedResource Include="GUI\FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LichSuBan.resx">
+      <DependentUpon>LichSuBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Vaccine.resx">
       <DependentUpon>Vaccine.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,8 +164,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ChiTietHoaDons.xml" />
     <Content Include="DanhMucVaccine.xml" />
-    <Content Include="GioHang.xml" />
+    <Content Include="HoaDon.xml" />
+    <Content Include="HoaDonNhapXuats.xml" />
+    <Content Include="IMG\cuong.png" />
+    <Content Include="IMG\dat.jpg" />
+    <Content Include="IMG\trunganh.jpg" />
     <Content Include="LichSuBan.xml" />
     <Content Include="NhanVien.xml">
       <SubType>Designer</SubType>

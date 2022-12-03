@@ -35,7 +35,7 @@ namespace Vaccine.BLL
         public void setSoluong(int soLuongTraoDoi, XmlNode node)
         {
             if (node != null)
-                node.ChildNodes[2].InnerText = (int.Parse(node.ChildNodes[2].InnerText) + soLuongTraoDoi).ToString();
+                node.ChildNodes[5].InnerText = (int.Parse(node.ChildNodes[5].InnerText) + soLuongTraoDoi).ToString();
         }
 
 
@@ -50,7 +50,7 @@ namespace Vaccine.BLL
             foreach (XmlNode item in ds)
             {
                 dgv.Rows.Add();
-                dgv.Rows[sd].Cells[0].Value = item.SelectSingleNode("MaDM").InnerText;
+                dgv.Rows[sd].Cells[0].Value = item.SelectSingleNode("TenDM").InnerText;
                 dgv.Rows[sd].Cells[1].Value = item.SelectSingleNode("MaVC").InnerText;
                 dgv.Rows[sd].Cells[2].Value = item.SelectSingleNode("TenVC").InnerText;
                 dgv.Rows[sd].Cells[3].Value = item.SelectSingleNode("NgaySX").InnerText;
@@ -70,6 +70,10 @@ namespace Vaccine.BLL
             XmlNode vc = doc.CreateElement("vaccine");
 
             //tạo nút con của khách hàng là maVaccine
+            XmlElement TenDM = doc.CreateElement("TenDM");
+            TenDM.InnerText = vaccine.TenDM1.ToString();
+            vc.AppendChild(TenDM);
+
             XmlElement maVaccine = doc.CreateElement("MaVC");
             maVaccine.InnerText = vaccine.MaVaccine;//gán giá trị cho maVaccine
             vc.AppendChild(maVaccine);//thêm maVaccine vào trong vaccine
@@ -94,9 +98,7 @@ namespace Vaccine.BLL
             GiaTien.InnerText = vaccine.GiaTien;
             vc.AppendChild(GiaTien);
 
-            XmlElement maDM = doc.CreateElement("MaDM");
-            maDM.InnerText = vaccine.TenDM1.ToString();
-            vc.AppendChild(maDM);
+            
           
             //thêm vaccine vào gốc root
             root.AppendChild(vc);
@@ -111,7 +113,11 @@ namespace Vaccine.BLL
             if (vaccineCu != null)
             {
                 XmlNode vc = doc.CreateElement("vaccine");
-                
+
+                XmlElement TenDM = doc.CreateElement("TenDM");
+                TenDM.InnerText = vaccine.TenDM1.ToString();
+                vc.AppendChild(TenDM);
+
                 XmlElement maVaccine = doc.CreateElement("MaVC");
                 maVaccine.InnerText = vaccine.MaVaccine;//gán giá trị cho maVaccine
                 vc.AppendChild(maVaccine);//thêm maVaccine vào trong vaccine
@@ -137,9 +143,7 @@ namespace Vaccine.BLL
                 vc.AppendChild(giaTien);
 
 
-                XmlElement maDM = doc.CreateElement("MaDM");
-                maDM.InnerText = vaccine.TenDM1.ToString();
-                vc.AppendChild(maDM);
+                
 
                 //thay thế sách cũ bằng sách mới(sửa )
                 root.ReplaceChild(vc, vaccineCu);
@@ -170,13 +174,14 @@ namespace Vaccine.BLL
                 dgv.Rows.Add();//thêm một dòng mới
 
                 //đưa dữ liệu vào dòng vừa tạo
-                dgv.Rows[0].Cells[0].Value = vaccineTim.SelectSingleNode("MaVC").InnerText;
-                dgv.Rows[0].Cells[1].Value = vaccineTim.SelectSingleNode("TenVC").InnerText;
-                dgv.Rows[0].Cells[2].Value = vaccineTim.SelectSingleNode("NgaySX").InnerText;
-                dgv.Rows[0].Cells[3].Value = vaccineTim.SelectSingleNode("NgayHetHan").InnerText;
-                dgv.Rows[0].Cells[4].Value = vaccineTim.SelectSingleNode("SoLuong").InnerText;
-                dgv.Rows[0].Cells[5].Value = vaccineTim.SelectSingleNode("GiaTien").InnerText;
-                dgv.Rows[0].Cells[6].Value = vaccineTim.SelectSingleNode("MaDM").InnerText;
+                dgv.Rows[0].Cells[0].Value = vaccineTim.SelectSingleNode("TenDM").InnerText;
+                dgv.Rows[0].Cells[1].Value = vaccineTim.SelectSingleNode("MaVC").InnerText;
+                dgv.Rows[0].Cells[2].Value = vaccineTim.SelectSingleNode("TenVC").InnerText;
+                dgv.Rows[0].Cells[3].Value = vaccineTim.SelectSingleNode("NgaySX").InnerText;
+                dgv.Rows[0].Cells[4].Value = vaccineTim.SelectSingleNode("NgayHetHan").InnerText;
+                dgv.Rows[0].Cells[5].Value = vaccineTim.SelectSingleNode("SoLuong").InnerText;
+                dgv.Rows[0].Cells[6].Value = vaccineTim.SelectSingleNode("GiaTien").InnerText;
+                
                
             }
             
@@ -196,24 +201,26 @@ namespace Vaccine.BLL
                 dgv.Rows.Add();//thêm một dòng mới
 
                 //đưa dữ liệu vào dòng vừa tạo
-                dgv.Rows[0].Cells[0].Value = vaccinTim.SelectSingleNode("MaVC").InnerText;
-                dgv.Rows[0].Cells[1].Value = vaccinTim.SelectSingleNode("TenVC").InnerText;
-                dgv.Rows[0].Cells[2].Value = vaccinTim.SelectSingleNode("NgaySX").InnerText;
-                dgv.Rows[0].Cells[3].Value = vaccinTim.SelectSingleNode("NgayHetHan").InnerText;
-                dgv.Rows[0].Cells[4].Value = vaccinTim.SelectSingleNode("SoLuong").InnerText;
-                dgv.Rows[0].Cells[5].Value = vaccinTim.SelectSingleNode("GiaTien").InnerText;
-                dgv.Rows[0].Cells[6].Value = vaccinTim.SelectSingleNode("MaDM").InnerText;
+                dgv.Rows[0].Cells[0].Value = vaccinTim.SelectSingleNode("TenDM").InnerText;
+                dgv.Rows[0].Cells[1].Value = vaccinTim.SelectSingleNode("MaVC").InnerText;
+                dgv.Rows[0].Cells[2].Value = vaccinTim.SelectSingleNode("TenVC").InnerText;
+                dgv.Rows[0].Cells[3].Value = vaccinTim.SelectSingleNode("NgaySX").InnerText;
+                dgv.Rows[0].Cells[4].Value = vaccinTim.SelectSingleNode("NgayHetHan").InnerText;
+                dgv.Rows[0].Cells[5].Value = vaccinTim.SelectSingleNode("SoLuong").InnerText;
+                dgv.Rows[0].Cells[6].Value = vaccinTim.SelectSingleNode("GiaTien").InnerText;
+                
             
 
                 ketQua = new VaccineDTO();
 
+                ketQua.TenDM1 = vaccinTim.SelectSingleNode("TenDM").InnerText;
                 ketQua.MaVaccine = vaccinTim.SelectSingleNode("MaVC").InnerText;
                 ketQua.TenVaccine = vaccinTim.SelectSingleNode("TenVC").InnerText;
                 ketQua.NgaySX = vaccinTim.SelectSingleNode("NgaySX").InnerText;
                 ketQua.NgayHetHan = vaccinTim.SelectSingleNode("NgayHetHan").InnerText;
                 ketQua.SoLuong = vaccinTim.SelectSingleNode("SoLuong").InnerText;
                 ketQua.GiaTien = vaccinTim.SelectSingleNode("GiaTien").InnerText;
-                ketQua.TenDM1 = vaccinTim.SelectSingleNode("MaDM").InnerText;
+                
 
             }
             return ketQua;

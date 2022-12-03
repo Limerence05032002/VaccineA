@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ChiTietHoaDons>
+  <ChiTietHoaDon>
+    <maHD>HD00001</maHD>
+    <maSP>NS00001</maSP>
+    <soLuong>1</soLuong>
+    <DonGia>10000</DonGia>
+  </ChiTietHoaDon>
+</ChiTietHoaDons>

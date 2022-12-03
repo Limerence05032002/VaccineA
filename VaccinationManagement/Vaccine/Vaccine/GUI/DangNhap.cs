@@ -13,6 +13,7 @@ namespace Vaccine.GUI
 {
     public partial class DangNhap : Form
     {
+        static public TrangQuanTri form2;
         public DangNhap()
         {
             InitializeComponent();
@@ -42,24 +43,38 @@ namespace Vaccine.GUI
                 FromXML_pass = x.XMLpass;
                 FromXML_name = x.XMLname;
             }
+            if (user == "admin")
+            {
+                if (pass == "123")
+                {
+                    this.Hide();
+                    TrangQuanTri FormNhanVien = new TrangQuanTri();
+                    FormNhanVien.Show();
+                }
 
-            if (user == FromXML_user){
+            }
+            else if (user == FromXML_user)
+            {
                 if (pass == FromXML_pass)
                 {
-                        MessageBox.Show("Đăng nhập thành công !");
-                        ClearBox();
-                        this.Hide();
-                        FormNhanVien FormNhanVien = new FormNhanVien();
-                        FormNhanVien.Show();
-                    }else
-                    {
-                        MessageBox.Show("Sai mật khẩu");
-                        ClearBox();  
-                    }
-            }else{
-                    MessageBox.Show("Sai tên đăng nhập !");
+                    MessageBox.Show("Đăng nhập thành công !");
+                    ClearBox();
+                    this.Hide();
+                    BanVaccine FormNhanVien = new BanVaccine();
+                    FormNhanVien.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Sai mật khẩu");
                     ClearBox();
                 }
+            }
+            else
+            {
+                MessageBox.Show("Sai tên đăng nhập !");
+                ClearBox();
+            }
+            
         }
             private void ClearBox(){
                 username.Clear();

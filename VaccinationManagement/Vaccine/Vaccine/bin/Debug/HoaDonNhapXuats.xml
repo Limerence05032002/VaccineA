@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HoaDonNhapXuats>
+  <HoaDonNhapXuat>
+    <maHD>HD00001</maHD>
+    <maNV>NV00001</maNV>
+    <maKH>KH00001</maKH>
+    <LoaiHD>N</LoaiHD>
+  </HoaDonNhapXuat>
+  <HoaDonNhapXuat>
+    <maHD>HD00002</maHD>
+  </HoaDonNhapXuat>
+</HoaDonNhapXuats>

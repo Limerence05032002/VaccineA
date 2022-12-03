@@ -100,3 +100,4 @@ C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\obj\Debug\Va
 C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\obj\Debug\Vaccine.csproj.GenerateResource.Cache
 C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\bin\Debug\Vaccine.exe
 C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\bin\Debug\Vaccine.pdb
+C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\obj\Debug\Vaccine.GUI.LichSuBan.resources

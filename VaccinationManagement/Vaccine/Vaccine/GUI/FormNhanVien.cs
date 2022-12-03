@@ -70,6 +70,7 @@ namespace Vaccine.GUI
                 txtMK.Text = dgv.Rows[e.RowIndex].Cells["Column3"].FormattedValue.ToString();
                 txtDC.Text = dgv.Rows[e.RowIndex].Cells["Column4"].FormattedValue.ToString();
                 txtSDT.Text = dgv.Rows[e.RowIndex].Cells["Column5"].FormattedValue.ToString();
+
             }
         }
 
@@ -119,6 +120,16 @@ namespace Vaccine.GUI
         }
 
         private void FormNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_MouseCaptureChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

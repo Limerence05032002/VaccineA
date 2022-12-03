@@ -17,7 +17,7 @@ namespace Vaccine
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.BanVaccine());
+            Application.Run(new GUI.DangNhap());
         }
     }
 }
