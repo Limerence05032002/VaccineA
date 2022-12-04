@@ -90,4 +90,16 @@
     <soLuong>32</soLuong>
     <DonGia>999</DonGia>
   </ChiTietHoaDon>
+  <ChiTietHoaDon>
+    <maHD>HD00014</maHD>
+    <maSP>Vaccine Uốn ván 2</maSP>
+    <soLuong>45</soLuong>
+    <DonGia>29250</DonGia>
+  </ChiTietHoaDon>
+  <ChiTietHoaDon>
+    <maHD>HD00015</maHD>
+    <maSP>Vaccine Uốn ván 2</maSP>
+    <soLuong>45</soLuong>
+    <DonGia>29250</DonGia>
+  </ChiTietHoaDon>
 </ChiTietHoaDons>

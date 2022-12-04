@@ -15,7 +15,6 @@ namespace Vaccine.GUI
 {
     public partial class BanVaccine : Form
     {
-        private HoaDonBLL hoaDonBLL = new HoaDonBLL();
         private HoaDonDTO hoaDonDTO = new HoaDonDTO();
 
         private XmlDocument doc = new XmlDocument();
@@ -66,7 +65,7 @@ namespace Vaccine.GUI
         void loadTable()
         {
             dgvVaccineBan.Rows.Clear();
-            XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\tb_Vaccine.xml");
+            XDoc = XmlFile.getXmlDocument(@"../../tb_Vaccine.xml");
             XmlNodeList nodeList = XDoc.SelectNodes("/Vaccines/vaccine");
             foreach (XmlNode x in nodeList)
             {
@@ -133,7 +132,7 @@ namespace Vaccine.GUI
         {
 
             List<XmlNode> nodeList = new List<XmlNode>();
-            XmlDocument XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\ChiTietHoaDons.xml");
+            XmlDocument XDoc = XmlFile.getXmlDocument(@"../../ChiTietHoaDons.xml");
             for (int i = 0; i < dgvGioHang.Rows.Count - 1; i++)
             {
 

@@ -49,7 +49,6 @@
     <Compile Include="BLL\DANHMUC_BLL.cs" />
     <Compile Include="BLL\fileXML.cs" />
     <Compile Include="BLL\HoaDon.cs" />
-    <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\NHANVIEN_BLL.cs" />
     <Compile Include="BLL\VaccineBLL.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />

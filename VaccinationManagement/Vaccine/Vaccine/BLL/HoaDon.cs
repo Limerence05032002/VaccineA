@@ -28,8 +28,8 @@ namespace Vaccine.BLL
         {
             try
             {
-                XmlDocument XDocChiTietVaccine = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\tb_Vaccine.xml");
-                XmlDocument XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\HoaDonNhapXuats.xml");
+                XmlDocument XDocChiTietVaccine = XmlFile.getXmlDocument(@"../../tb_Vaccine.xml");
+                XmlDocument XDoc = XmlFile.getXmlDocument(@"../../HoaDonNhapXuats.xml");
                 String maHD_new = taoMaHoaDon(XDoc);
                 String loai = l;
                 int CongTru = 1;
@@ -53,10 +53,10 @@ namespace Vaccine.BLL
                     x.InsertBefore(maHoaDon, x.FirstChild);
                     XDocCTHD.DocumentElement.AppendChild(x);
                 }
-                
-                XDocCTHD.Save(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\ChiTietHoaDons.xml"); //ChiTietHoaDon.xml == LichSuBan.xml
+
+                XDocCTHD.Save(@"../../ChiTietHoaDons.xml"); //ChiTietHoaDon.xml == LichSuBan.xml
                 MessageBox.Show("Đã lưu");
-                XDocChiTietVaccine.Save(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\tb_Vaccine.xml");
+                XDocChiTietVaccine.Save(@"../../tb_Vaccine.xml");
             }
             catch (Exception e)
             {
@@ -69,7 +69,7 @@ namespace Vaccine.BLL
         public void ThemHoaDon(DataGridView dgvVaccineBan, String loai)
         {
             List<XmlNode> nodeList = new List<XmlNode>();
-            XmlDocument XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\ChiTietHoaDons.xml");
+            XmlDocument XDoc = XmlFile.getXmlDocument(@"../../ChiTietHoaDons.xml");
             for (int i = 0; i < dgvVaccineBan.Rows.Count - 1; i++)
             {
 
