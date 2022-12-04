@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vaccine.BLL;
 
 namespace Vaccine.GUI
 {
@@ -77,6 +78,13 @@ namespace Vaccine.GUI
         private void panel_body_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Backup bk = new Backup();
+            bk.BackUpData();
+            MessageBox.Show("Đã sao lưu lên máy chủ", "Thành công!");
         }
     }
 }

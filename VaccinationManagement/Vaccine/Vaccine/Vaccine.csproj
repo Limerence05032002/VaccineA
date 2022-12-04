@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Backup.cs" />
     <Compile Include="BLL\DANHMUC_BLL.cs" />
     <Compile Include="BLL\fileXML.cs" />
     <Compile Include="BLL\HoaDon.cs" />
@@ -166,12 +167,10 @@
   <ItemGroup>
     <Content Include="ChiTietHoaDons.xml" />
     <Content Include="DanhMucVaccine.xml" />
-    <Content Include="HoaDon.xml" />
     <Content Include="HoaDonNhapXuats.xml" />
     <Content Include="IMG\cuong.png" />
     <Content Include="IMG\dat.jpg" />
     <Content Include="IMG\trunganh.jpg" />
-    <Content Include="LichSuBan.xml" />
     <Content Include="NhanVien.xml">
       <SubType>Designer</SubType>
     </Content>

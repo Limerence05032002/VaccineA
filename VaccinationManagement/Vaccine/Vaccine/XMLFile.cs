@@ -24,8 +24,8 @@ namespace Vaccine
                 XmlElement el = XDoc.CreateElement("HoaDonNhapXuat");
                 XmlElement mHD = XDoc.CreateElement("maHD");
 
-                mHD.InnerText = maHD;
                 XmlElement mNV = XDoc.CreateElement("maNV");
+                mHD.InnerText = maHD;
 
                 XmlElement l = XDoc.CreateElement("LoaiHD");
                 l.InnerText = loai;

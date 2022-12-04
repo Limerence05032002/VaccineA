@@ -20,7 +20,7 @@
   </HoaDonNhapXuat>
   <HoaDonNhapXuat>
     <maHD>HD00005</maHD>
-    <LoaiHD>N</LoaiHD>
+    <LoaiHD>X</LoaiHD>
   </HoaDonNhapXuat>
   <HoaDonNhapXuat>
     <maHD>HD00006</maHD>
@@ -41,5 +41,17 @@
   <HoaDonNhapXuat>
     <maHD>HD00010</maHD>
     <LoaiHD>X</LoaiHD>
+  </HoaDonNhapXuat>
+  <HoaDonNhapXuat>
+    <maHD>HD00011</maHD>
+    <LoaiHD>N</LoaiHD>
+  </HoaDonNhapXuat>
+  <HoaDonNhapXuat>
+    <maHD>HD00012</maHD>
+    <LoaiHD>X</LoaiHD>
+  </HoaDonNhapXuat>
+  <HoaDonNhapXuat>
+    <maHD>HD00013</maHD>
+    <LoaiHD>N</LoaiHD>
   </HoaDonNhapXuat>
 </HoaDonNhapXuats>

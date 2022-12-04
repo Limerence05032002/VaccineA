@@ -45,8 +45,8 @@ namespace Vaccine.BLL
                 XmlFile.themHoaDon(XDoc, maHD_new, loai);
                 foreach (XmlNode x in nodeList)
                 {
-                    XmlNodeList temp = XDocChiTietVaccine.SelectNodes("/Vaccines/vaccine[MaVC = '" + x.ChildNodes[1].InnerText + "']");
-                    cTNS.setSoluong(int.Parse(x.ChildNodes[6].InnerText) * CongTru, temp[0]);
+                    XmlNodeList temp = XDocChiTietVaccine.SelectNodes("/Vaccines/vaccine[MaVC = '" + x.ChildNodes[0].InnerText + "']");
+                    cTNS.setSoluong(int.Parse(x.ChildNodes[1].InnerText) * CongTru, temp[0]);
 
                     XmlNode maHoaDon = XDocCTHD.CreateElement("maHD");
                     maHoaDon.InnerText = maHD_new;
@@ -77,16 +77,16 @@ namespace Vaccine.BLL
 
                 XmlElement maSP = XDoc.CreateElement("MaVC");
                 Console.WriteLine(maSP.InnerText);
-
-                Console.WriteLine(dgvVaccineBan.Rows[i].Cells[6].Value.ToString() + "MaVC");
-
-                maSP.InnerText = dgvVaccineBan.Rows[i].Cells[6].Value.ToString();
+                Console.WriteLine(dgvVaccineBan.Rows[i].Cells[1].Value.ToString() + " MaVC");
+                maSP.InnerText = dgvVaccineBan.Rows[i].Cells[1].Value.ToString();
 
                 XmlElement soLuong = XDoc.CreateElement("soLuong");
+                soLuong.InnerText = dgvVaccineBan.Rows[i].Cells[5].Value.ToString();
+                Console.WriteLine(dgvVaccineBan.Rows[i].Cells[5].Value.ToString() + " SoLuong");
 
-                soLuong.InnerText = dgvVaccineBan.Rows[i].Cells[3].Value.ToString();
                 XmlElement donGia = XDoc.CreateElement("DonGia");
-                donGia.InnerText = dgvVaccineBan.Rows[i].Cells[4].Value.ToString(); ;
+                donGia.InnerText = dgvVaccineBan.Rows[i].Cells[6].Value.ToString();
+                Console.WriteLine(dgvVaccineBan.Rows[i].Cells[6].Value.ToString() + " SoLuong");
 
                 node.AppendChild(maSP);
                 node.AppendChild(soLuong);

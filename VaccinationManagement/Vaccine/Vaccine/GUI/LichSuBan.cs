@@ -37,8 +37,11 @@ namespace Vaccine.GUI
             {
                 MessageBox.Show("Zo roi");
                 
-                    tongtien = 0;
-                    soluong = 0;
+                    int tongtien = 0;
+                    int soluong = 0;
+                    foreach (XmlNode b in nodeListNV)
+                        if ((b.ChildNodes[0].InnerText).Equals(x.ChildNodes[1].InnerText))
+                            tenNV = b.ChildNodes[1].InnerText;
                     foreach (XmlNode c in nodeListCTHD)
                     {
                         if ((c.ChildNodes[0].InnerText).Equals(x.ChildNodes[0].InnerText))
@@ -49,7 +52,7 @@ namespace Vaccine.GUI
                     }
                     Console.WriteLine(x.ChildNodes[0].InnerText);
 
-                    dgvLichSu.Rows.Add(x.ChildNodes[0].InnerText, soluong, tongtien);
+                    dgvLichSu.Rows.Add(x.ChildNodes[0].InnerText,tenNV, soluong, tongtien);
                 
             }
         }

@@ -1,75 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vaccines>
   <vaccine>
-    <TenDM>gdfgdf</TenDM>
-    <MaVC>vc43</MaVC>
-    <TenVC>gfdg</TenVC>
-    <NgaySX>gdfg</NgaySX>
-    <NgayHetHan>dfgs</NgayHetHan>
-    <SoLuong>70</SoLuong>
-    <GiaTien>500</GiaTien>
-  </vaccine>
-  <vaccine>
-    <TenDM>gdfgdf</TenDM>
-    <MaVC>vc435</MaVC>
-    <TenVC>gfdg</TenVC>
-    <NgaySX>gdfg</NgaySX>
-    <NgayHetHan>dfgs</NgayHetHan>
-    <SoLuong>90</SoLuong>
-    <GiaTien>500</GiaTien>
-  </vaccine>
-  <vaccine>
-    <TenDM>gdfgdf</TenDM>
-    <MaVC>vc4</MaVC>
-    <TenVC>gdgd4545</TenVC>
+    <TenDM>Vaccine Uốn ván 2</TenDM>
+    <MaVC>vc1000</MaVC>
+    <TenVC>trung anh</TenVC>
     <NgaySX>Wednesday, November 30, 2022</NgaySX>
-    <NgayHetHan>Wednesday, November 30, 2022</NgayHetHan>
-    <SoLuong>7454</SoLuong>
-    <GiaTien>500</GiaTien>
+    <NgayHetHan>Sunday, December 4, 2022</NgayHetHan>
+    <SoLuong>300</SoLuong>
+    <GiaTien>650</GiaTien>
   </vaccine>
   <vaccine>
-    <MaVC>vc01</MaVC>
-    <TenVC>vaccine15</TenVC>
+    <TenDM>Vaccine Covid 19</TenDM>
+    <MaVC>VCCV01</MaVC>
+    <TenVC>vaccine nolo</TenVC>
     <NgaySX>Wednesday, November 30, 2022</NgaySX>
-    <NgayHetHan>Saturday, December 3, 2022</NgayHetHan>
-    <SoLuong>45</SoLuong>
-    <GiaTien>4550</GiaTien>
-    <TenDM>Vaccine Sởi</TenDM>
+    <NgayHetHan>Sunday, December 4, 2022</NgayHetHan>
+    <SoLuong>32</SoLuong>
+    <GiaTien>999</GiaTien>
   </vaccine>
   <vaccine>
     <TenDM>Vaccine Uốn ván</TenDM>
-    <MaVC>vc123</MaVC>
-    <TenVC>vaccine hole</TenVC>
+    <MaVC>VCUV12</MaVC>
+    <TenVC>vaccinr ád</TenVC>
     <NgaySX>Wednesday, November 30, 2022</NgaySX>
-    <NgayHetHan>Saturday, December 3, 2022</NgayHetHan>
+    <NgayHetHan>Sunday, December 4, 2022</NgayHetHan>
     <SoLuong>21</SoLuong>
-    <GiaTien>12</GiaTien>
-  </vaccine>
-  <vaccine>
-    <TenDM>ádasd</TenDM>
-    <MaVC>ád</MaVC>
-    <TenVC>ád</TenVC>
-    <NgaySX>Wednesday, November 30, 2022</NgaySX>
-    <NgayHetHan>Saturday, December 3, 2022</NgayHetHan>
-    <SoLuong>45</SoLuong>
-    <GiaTien>45</GiaTien>
+    <GiaTien>242</GiaTien>
   </vaccine>
   <vaccine>
     <TenDM>Vaccine Sởi2</TenDM>
-    <MaVC>VC02</MaVC>
+    <MaVC>VC0222</MaVC>
     <TenVC>vaccine nolo</TenVC>
     <NgaySX>Wednesday, November 30, 2022</NgaySX>
-    <NgayHetHan>Saturday, December 3, 2022</NgayHetHan>
-    <SoLuong>32</SoLuong>
-    <GiaTien>32</GiaTien>
+    <NgayHetHan>Sunday, December 4, 2022</NgayHetHan>
+    <SoLuong>3220</SoLuong>
+    <GiaTien>999</GiaTien>
   </vaccine>
   <vaccine>
-    <TenDM>Vaccine Uốn ván 2</TenDM>
-    <MaVC>vc100</MaVC>
-    <TenVC>trung anh</TenVC>
+    <TenDM>Vaccine Uốn ván</TenDM>
+    <MaVC>VC03</MaVC>
+    <TenVC>Vaccine 12</TenVC>
+    <NgaySX>Wednesday, November 16, 2022</NgaySX>
+    <NgayHetHan>Friday, December 16, 2022</NgayHetHan>
+    <SoLuong>23</SoLuong>
+    <GiaTien>655</GiaTien>
+  </vaccine>
+  <vaccine>
+    <TenDM>CC999999</TenDM>
+    <MaVC>VCCV01</MaVC>
+    <TenVC>vaccine nolo</TenVC>
     <NgaySX>Wednesday, November 30, 2022</NgaySX>
-    <NgayHetHan>Saturday, December 3, 2022</NgayHetHan>
-    <SoLuong>3</SoLuong>
-    <GiaTien>650</GiaTien>
+    <NgayHetHan>Sunday, December 4, 2022</NgayHetHan>
+    <SoLuong>32</SoLuong>
+    <GiaTien>999</GiaTien>
   </vaccine>
 </Vaccines>

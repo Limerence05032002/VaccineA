@@ -66,7 +66,7 @@ namespace Vaccine.GUI
         void loadTable()
         {
             dgvVaccineBan.Rows.Clear();
-            XDoc = XmlFile.getXmlDocument("../../tb_Vaccine.xml");
+            XDoc = XmlFile.getXmlDocument(@"C:\Users\Trung\Desktop\BaiTap\VaccinationManagement\Vaccine\Vaccine\tb_Vaccine.xml");
             XmlNodeList nodeList = XDoc.SelectNodes("/Vaccines/vaccine");
             foreach (XmlNode x in nodeList)
             {
@@ -147,11 +147,11 @@ namespace Vaccine.GUI
                 Console.WriteLine(maSP.InnerText);
 
                 XmlElement soLuong = XDoc.CreateElement("soLuong");
-                soLuong.InnerText = dgvGioHang.Rows[i].Cells[3].Value.ToString();
+                soLuong.InnerText = dgvGioHang.Rows[i].Cells[6].Value.ToString();
                 Console.WriteLine(soLuong.InnerText);
 
                 XmlElement donGia = XDoc.CreateElement("DonGia");
-                donGia.InnerText = dgvGioHang.Rows[i].Cells[6].Value.ToString(); ;
+                donGia.InnerText = dgvGioHang.Rows[i].Cells[8].Value.ToString(); ;
                 Console.WriteLine(donGia.InnerText);
 
                 node.AppendChild(maSP);
@@ -164,10 +164,9 @@ namespace Vaccine.GUI
             HoaDon hoaDon = new HoaDon();
             hoaDon.add(XDoc, nodeList,"X");
 
-            loadTable();
-         
-
+           
             MessageBox.Show("Đã Thanh Toán Thành Công");
+            loadTable();
             }
         
 
