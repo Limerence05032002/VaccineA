@@ -173,5 +173,12 @@ namespace Vaccine.GUI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try { dgvGioHang.Rows.RemoveAt(dgvGioHang.CurrentRow.Index); }
+            catch { }
+            capNhatTongTien();
+        }
     }
 }

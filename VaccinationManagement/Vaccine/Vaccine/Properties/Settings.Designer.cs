@@ -22,5 +22,16 @@ namespace Vaccine.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TRUNGANH\\SQLEXPRESS;Initial Catalog=VaccinationManager_p5;Persist Sec" +
+            "urity Info=True;User ID=sa;Password=123456")]
+        public string VaccinationManager_p5ConnectionString {
+            get {
+                return ((string)(this["VaccinationManager_p5ConnectionString"]));
+            }
+        }
     }
 }

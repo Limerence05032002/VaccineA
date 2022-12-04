@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -37,7 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_body = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
@@ -53,12 +55,23 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 763);
+            this.panel1.Size = new System.Drawing.Size(259, 763);
             this.panel1.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(91, 466);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Teal;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button5.Location = new System.Drawing.Point(3, 358);
             this.button5.Name = "button5";
@@ -71,6 +84,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Teal;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Location = new System.Drawing.Point(3, 308);
             this.button4.Name = "button4";
@@ -83,6 +97,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Teal;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(3, 258);
             this.button3.Name = "button3";
@@ -95,10 +110,11 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Teal;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(3, 208);
+            this.button2.Location = new System.Drawing.Point(3, 154);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 44);
+            this.button2.Size = new System.Drawing.Size(253, 63);
             this.button2.TabIndex = 2;
             this.button2.Text = "Bán vaccine";
             this.button2.UseVisualStyleBackColor = false;
@@ -107,10 +123,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(3, 158);
+            this.button1.Location = new System.Drawing.Point(3, 90);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 44);
+            this.button1.Size = new System.Drawing.Size(253, 63);
             this.button1.TabIndex = 1;
             this.button1.Text = "Quản lý nhân viên";
             this.button1.UseVisualStyleBackColor = false;
@@ -120,9 +137,9 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(223, 12);
+            this.panel2.Location = new System.Drawing.Point(277, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1334, 65);
+            this.panel2.Size = new System.Drawing.Size(1280, 65);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -138,21 +155,19 @@
             // panel_body
             // 
             this.panel_body.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel_body.Location = new System.Drawing.Point(223, 83);
+            this.panel_body.Location = new System.Drawing.Point(277, 83);
             this.panel_body.Name = "panel_body";
-            this.panel_body.Size = new System.Drawing.Size(1334, 692);
+            this.panel_body.Size = new System.Drawing.Size(1280, 692);
             this.panel_body.TabIndex = 2;
             this.panel_body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_body_Paint);
             // 
-            // button6
+            // panel3
             // 
-            this.button6.Location = new System.Drawing.Point(91, 466);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(253, 81);
+            this.panel3.TabIndex = 7;
             // 
             // TrangQuanTri
             // 
@@ -184,5 +199,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel3;
     }
 }
